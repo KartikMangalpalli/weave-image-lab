@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SectionCreator, type PixelSection } from "@/components/SectionCreator";
+import { DatabaseSectionCreator } from "@/components/DatabaseSectionCreator";
+import { type PixelSection } from "@/lib/supabase";
 import { ImageUpload } from "@/components/ImageUpload";
 import { ImageProcessor } from "@/components/ImageProcessor";
 import { Palette, Upload, Zap, Download } from "lucide-react";
@@ -83,7 +84,7 @@ const Index = () => {
           </TabsList>
 
           <TabsContent value="sections" className="space-y-4">
-            <SectionCreator 
+            <DatabaseSectionCreator 
               onSectionSelect={setSelectedSection}
               selectedSection={selectedSection}
             />

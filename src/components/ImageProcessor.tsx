@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Download, Wand2, Eye } from "lucide-react";
 import { toast } from "sonner";
-import type { PixelSection } from "./SectionCreator";
+import type { PixelSection } from "@/lib/supabase";
 
 interface ImageProcessorProps {
   originalImage: File | null;
